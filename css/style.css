@@ -20,15 +20,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     word-break: break-word;
 }
 
 .conteiner{
     background-color: var(--cor-card);
     border-radius: 20px;
-    width:20%;
-    padding: 20px 0;
+  max-width: 350px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     flex-direction: column;
@@ -39,15 +38,32 @@ body{
     display: flex;
     justify-content: center;
 }
-.olho_icone{
-    position: absolute;
-    top: 35%;
+
+.image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-
 .Imagem__Card{
-    width: 85%;
-    border-radius: 20px;
+  width:100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  background: #0080805c;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  display: none;
+}
+
+.image-wrapper:hover .overlay {
+  display: grid;
 }
 
 .Card__titulo{
